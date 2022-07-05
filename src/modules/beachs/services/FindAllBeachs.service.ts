@@ -1,11 +1,11 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { Beach } from '../models/Beach';
-import { BeachRepository } from '../repositories';
+import { IBeachRepository, MongoDbBeachRepository } from '../repositories';
+import { Beach } from '../schemas/Beach.schema';
 
 @Injectable()
 export class FindAllBeachsService {
   constructor(
-    @Inject(BeachRepository) private beachRepository: BeachRepository,
+    @Inject(MongoDbBeachRepository) private beachRepository: IBeachRepository,
   ) {}
 
   public async execute(): Promise<Beach[]> {

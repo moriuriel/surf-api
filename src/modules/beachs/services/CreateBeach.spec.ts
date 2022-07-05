@@ -1,4 +1,4 @@
-import { CreateBeach, GeoPosition } from '../models/Beach';
+import { CreateBeach, GeoPosition } from '../interfaces/Beachs.interfaces';
 import { BeachRepository } from '../repositories';
 import { CreateBeachService } from './CreateBeach.service';
 

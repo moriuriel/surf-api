@@ -1,5 +1,5 @@
 import { IsEnum, IsNotEmpty, IsNumber, IsString } from 'class-validator';
-import { GeoPosition } from '../models/Beach';
+import { GeoPosition } from '../interfaces/Beachs.interfaces';
 
 export class CreateBeachDto {
   @IsString()

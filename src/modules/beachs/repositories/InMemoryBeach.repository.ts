@@ -1,5 +1,6 @@
 import { v4 } from 'uuid';
-import { CreateBeach, Beach } from '../models/Beach';
+import { Beach, CreateBeach } from '../interfaces/Beachs.interfaces';
+
 import { IBeachRepository } from './BeachRepository.interface';
 
 export class BeachRepository implements IBeachRepository {

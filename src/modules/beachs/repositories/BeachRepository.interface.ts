@@ -1,4 +1,5 @@
-import { Beach, CreateBeach } from '../models/Beach';
+import { CreateBeach } from '../interfaces/Beachs.interfaces';
+import { Beach } from '../schemas/Beach.schema';
 
 export interface IBeachRepository {
   create(beach: CreateBeach): Promise<Beach>;

@@ -1,11 +1,15 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
 import { BeachsController } from './controllers';
-import { BeachRepository } from './repositories';
+import { MongoDbBeachRepository } from './repositories';
+import { Beach, BeachSchema } from './schemas/Beach.schema';
 import { CreateBeachService, FindAllBeachsService } from './services';
 
 @Module({
-  imports: [],
+  imports: [
+    MongooseModule.forFeature([{ name: Beach.name, schema: BeachSchema }]),
+  ],
   controllers: [BeachsController],
-  providers: [BeachRepository, CreateBeachService, FindAllBeachsService],
+  providers: [MongoDbBeachRepository, CreateBeachService, FindAllBeachsService],
 })
 export class BeachModule {}
