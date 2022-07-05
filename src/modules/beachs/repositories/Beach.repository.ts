@@ -17,4 +17,8 @@ export class BeachRepository implements IBeachRepository {
 
     return newBeach;
   }
+
+  async findAll(): Promise<Beach[]> {
+    return this.beachs;
+  }
 }
